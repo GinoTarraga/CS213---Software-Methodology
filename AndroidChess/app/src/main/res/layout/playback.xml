@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by_date"
+        android:id="@+id/sortDate"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/sortTitle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by_title"
+        android:id="@+id/sortTitle"
+        android:layout_alignTop="@+id/sortDate"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gameList"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sortDate"
+        android:choiceMode="singleChoice"
+        android:layout_above="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Replay Saved Games"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/sortTitle"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Click on the Game to start replay"
+        android:id="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
